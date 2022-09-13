@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 html {
@@ -9,4 +12,104 @@ html {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: #19A1AE;
+    position: relative;
+    overflow: hidden;
 }
+
+html .top-circle {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+html .bottom-circle {
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    transform: translateX(50%) translateY(50%);
+}
+
+.card {
+    max-width: 326px;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
+}
+
+.card .card-header img {
+    width: 100%;
+}
+
+.card .card-body {
+    background-color: white;
+    text-align: center;
+}
+
+.card .card-body img {
+    border: 5px solid white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.card .card-body h1 {
+    color: #2E3349;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    transform: translateY(-150%);
+}
+
+.card .card-body h1 span {
+    color: #6B7082;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.card .card-body p {
+    color: #6B7082;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    transform: translateY(-150%);
+}
+
+.card .card-footer {
+    border-top: 1px solid #E8E9EC;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card .card-footer .followers,
+.card .card-footer .likes,
+.card .card-footer .photos {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.card .card-footer h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #2E3349;
+}
+
+.card .card-footer small {
+    color: #6B7082;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1.5;
+    line-height: 13px;
+}
+
+@media only screen and (min-width: 400px) {
+    .card {
+        max-width: 400px;
+    }
+  }
